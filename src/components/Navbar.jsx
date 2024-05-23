@@ -16,6 +16,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
 
 const Links = ["Dashboard", "Projects", "Team"];
 
@@ -53,15 +54,15 @@ export default function NAvigation(props) {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Avatar size={"sm"} src={"/logo.png"} />
+            <Link to={"/"}>  <Avatar size={"sm"} src={"/logo.png"} /></Link>
             <HStack
               as={"nav"}
               spacing={4}
               display={{ base: "none", md: "flex" }}
             >
-              {Links.map((link) => (
+              {/* {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
-              ))}
+              ))} */}
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
